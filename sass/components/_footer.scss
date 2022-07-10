@@ -20,30 +20,19 @@
     color: var(--thirdty-text-color);
     display: block;
     margin-bottom: 20px;
-    text-align: center;
-    @media screen and (min-width: 768px) {
-        text-align: start;
-        margin-left: 100px;
-    }
-    @media screen and (min-width: 1200px) {
-        margin-left: 0;
-    }
 }
 .address {
     font-style: normal;
 }
 .address-list__item {
     display: flex;
-    justify-content: center;
     &:not(:last-child) {
         margin-bottom: 8px;
     }
-    @media screen and (min-width: 768px) {
-        justify-content: flex-start;
-        margin-left: 70px;
+    @media screen and (max-width: 1199px) {
+        justify-content: center;
     }
     @media screen and (min-width: 1200px) {
-        margin-left: 0;
         &:not(:last-child) {
         margin-bottom: 9px;
         }
@@ -64,21 +53,23 @@
     color: rgba(255, 255, 255, 0.6);
 }
 .footer-contacts {
-    margin-bottom: 60px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 60px;
+    }
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
+    
 }
 .footer_tablet-field {
     @media screen and (min-width: 768px) {
         display: flex;
         align-items: baseline;
+        justify-content: space-around;
     }
-}
-.join {
-    margin-bottom: 60px;
-    @media screen and (min-width: 768px) {
-        margin-left: auto;
-        margin-right: 75px;
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 60px;
     }
-    
 }
 .join__text {
     font-weight: 700;
@@ -88,7 +79,9 @@
     text-transform: uppercase;
     color: var(--thirdty-text-color);
     margin-bottom: 20px;
-    text-align: center;
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
 }
 .join-list {
     display: flex;
