@@ -38,9 +38,9 @@
             <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
           </ul>
         </nav>
-        <ul class="contacts-list list">
+        <ul class="contacts-list">
           <li class="contacts-list__item">
-            <a class="contacts-list__link link" href="mailto:info@devstudio.com" title="Send email">
+            <a class="contacts-list__link" href="mailto:info@devstudio.com" title="Send email">
               <svg class="contacts-list__icon" width="16" height="12">
                 <use href="./images/symbol-defs.svg#icon-envelope"></use>
               </svg>
@@ -48,7 +48,7 @@
             >
           </li>
           <li class="contacts-list__item">
-            <a class="contacts-list__link link" href="tel:+380961111111" title="Call">
+            <a class="contacts-list__link" href="tel:+380961111111" title="Call">
               <svg class="contacts-list__icon" width="10" height="16">
                 <use href="./images/symbol-defs.svg#icon-smartphone"></use>
               </svg>
@@ -56,14 +56,61 @@
             >
           </li>
         </ul>
+        <button class="header__button" type="button" data-menu-open>
+          <svg class="header__icon-menu" height="16px" width="24px">
+            <use href="./images/symbol-defs.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
+      <!-- mobile-menu -->
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button class="mobile-menu__button" type="button" data-menu-close>
+          <svg class="mobile-menu__icon-close" height="19px" width="19px">
+            <use href="./images/symbol-defs.svg#icon-close"></use>
+          </svg>
+          </button>
+         <div class="nav-field">
+            <nav class="mobile-nav">
+             <ul class="mobile-nav__list">
+             <li class="mobile-nav__item">
+               <a class="mobile-nav__link nav__link--active" href="./index.html">Студия</a>
+             </li>
+             <li class="mobile-nav__item">
+               <a class="mobile-nav__link " href="./portfolio.html" target="_self">Портфолио</a>
+             </li>
+             <li class="mobile-nav__item"><a class="mobile-nav__link" href="">Контакты</a></li>
+             </ul>
+            </nav>
+         </div>
+         <div class="contact-field">
+           <ul class="mobile-contacts">
+             <li class="mobile-contacts__item">
+               <a class="mobile-contacts__link-tell" href="tel:+380961111111" title="Call">
+               +38 096 111 11 11</a>
+             </li>
+             <li class="mobile-contacts__item">
+               <a class="mobile-contacts__link-mail" href="mailto:info@devstudio.com" title="Send email">
+               info@devstudio.com</a>
+             </li>
+           </ul>
+           <ul class="mobile-social">
+             <li class="mobile-social__item"><a href="" class="mobile-social__link">Instagram</a></li>
+             <li class="mobile-social__item"><a href="" class="mobile-social__link">Twitter</a></li>
+             <li class="mobile-social__item"><a href="" class="mobile-social__link">Facebook</a></li>
+             <li class="mobile-social__item"><a href="" class="mobile-social__link">LinkedIn</a></li>
+           </ul>
+         </div>
+        </div>
+      </div>
+      <!-- /mobile-menu -->
     </header>
     <!--main-->
     <main class="main">
       <!--hero-->
       <section class="hero">
         <div class="container">
-          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+          <h1 class="hero__title">Эффективные решения <br> для вашего бизнеса</h1>
           <button class="hero__btn" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
@@ -74,7 +121,7 @@
           <ul class="skils-list">
             <li class="skils-list__item">
               <div class="skils-list__icon-field">
-                <svg width="70" height="70">
+                <svg width="65" height="70">
                   <use href="./images/symbol-defs.svg#icon-antenna-1"></use>
                 </svg>
               </div>
@@ -120,24 +167,36 @@
         </div>
       </section>
       <!--activity-->
-      <section class="section section--no-padding-top">
+      <section class="section section--no-padding-top section--mobile-none">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="activity-list">
             <li class="activity-list__item">
-              <img src="./images/img.jpg" alt="koding work" width="370" height="294" />
+              <picture>
+                <source srcset="./images/skils-desktop-1img@1x.webp 1x, ./images/skils-desktop-1img@2x.webp 2x" type="image/webp"/>
+                <source srcset="./images/skils-desktop-1img@1x.jpg 1x, ./images/skils-desktop-1img@2x.jpg 2x"/>
+                <img src="./images/skils-desktop-1img@1x.jpg" alt="koding work" width="370" height="294" />
+              </picture>
               <div class="activity-list__block">
                 <p class="activity-list__text">Десктопные приложения</p>
               </div>
             </li>
             <li class="activity-list__item">
-              <img src="./images/img2.jpg" alt="developing aplication" width="370" height="294" />
+              <picture>
+                <source srcset="./images/skils-desktop-2img@1x.webp 1x, ./images/skils-desktop-2img@2x.webp 2x" type="image/webp"/>
+                <source srcset="./images/skils-desktop-2img@1x.jpg 1x, ./images/skils-desktop-2img@2x.jpg 2x"/>
+                <img src="./images/skils-deskopt-2img@1x.jpg" alt="koding work" width="370" height="294" />
+              </picture>
               <div class="activity-list__block">
                 <p class="activity-list__text">Мобильные приложения</p>
               </div>
             </li>
             <li class="activity-list__item">
-              <img src="./images/img3.jpg" alt="design work" width="370" height="294" />
+              <picture>
+                <source srcset="./images/skils-desktop-3img@1x.webp 1x, ./images/skils-desktop-3img@2x.webp 2x" type="image/webp"/>
+                <source srcset="./images/skils-desktop-3img@1x.jpg 1x, ./images/skils-desktop-3img@2x.jpg 2x"/>
+                <img src="./images/skils-desktop-3img@1x.jpg" alt="koding work" width="370" height="294" />
+              </picture>
               <div class="activity-list__block">
                 <p class="activity-list__text">Дизайнерские решения</p>
               </div>
@@ -151,12 +210,11 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list__item">
-              <img
-                src="./images/img4.jpg"
-                alt="personal photo"
-                width="270"
-                height="260"
-              />
+              <picture class="team-list__picture">
+                <source srcset="./images/team-1img@1x.webp 1x, ./images/team-1img@2x.webp 2x" type="image/webp" />
+                <source srcset="./images/team-1img@1x.jpg 1x, ./images/team-1img@2x.jpg 2x" type="image/jpeg" />
+                <img class="team-list__img" src="./images/team-1img@1x.jpg" alt="personal photo"/>
+              </picture>
               <div class="team-list__box">
                 <h3 class="team-list__title">Игорь Демьяненко</h3>
                 <p class="team-list__text" lang="en">Product Designer</p>
@@ -193,12 +251,11 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/img5.jpg"
-                alt="personal photo"
-                width="270"
-                height="260"
-              />
+              <picture class="team-list__picture">
+                <source srcset="./images/team-2img@1x.webp 1x, ./images/team-2img@2x.webp 2x" type="image/webp">
+                <source srcset="./images/team-2img@1x.jpg 1x, ./images/team-2img@2x.jpg 2x">
+                <img class="team-list__img" src="./images/team-2img@1x.jpg" alt="personal photo"/>
+              </picture>
               <div class="team-list__box">
                 <h3 class="team-list__title">Ольга Репина</h3>
                 <p class="team-list__text" lang="en">Frontend Developer</p>
@@ -235,12 +292,11 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/img6.jpg"
-                alt="personal photo"
-                width="270"
-                height="260"
-              />
+              <picture class="team-list__picture">
+                <source srcset="./images/team-3img@1x.webp 1x, ./images/team-3img@2x.webp 2x" type="image/webp">
+                <source srcset="./images/team-3img@1x.jpg 1x, ./images/team-3img@2x.jpg 2x">
+                <img class="team-list__img" src="./images/team-3img@1x.jpg" alt="personal photo"/>
+              </picture>
               <div class="team-list__box">
                 <h3 class="team-list__title">Николай Тарасов</h3>
                 <p class="team-list__text" lang="en">Marketing</p>
@@ -277,12 +333,11 @@
               </div>
             </li>
             <li class="team-list__item">
-              <img
-                src="./images/img7.jpg"
-                alt="personal photo"
-                width="270"
-                height="260"
-              />
+              <picture class="team-list__picture">
+                <source srcset="./images/team-4img@1x.webp 1x, ./images/team-4img@2x.webp 2x" type="image/webp">
+                <source srcset="./images/team-4img@1x.jpg 1x, ./images/team-4img@2x.jpg 2x">
+                <img class="team-list__img" src="./images/team-4img@1x.jpg" alt="personal photo"/>
+              </picture>
               <div class="team-list__box">
                 <h3 class="team-list__title">Михаил Ермаков</h3>
                 <p class="team-list__text" lang="en">UI Designer</p>
@@ -321,7 +376,7 @@
           </ul>
         </div>
       </section>
-      <!--clients-->
+<!--clients-->
       <section class="section">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
@@ -376,7 +431,8 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-section">
-          <div class="footer-contacts">
+          <div class="footer_tablet-field">
+            <div class="footer-contacts">
             <a class="footer-contacts__logo logo" lang="en" href="./index.html"
               ><span class="logo__first-part">Web</span>Studio</a
             >
@@ -438,12 +494,13 @@
               </li>
             </ul>
           </div>
+          </div>
           <div class="footer-form-block">
             <form class="footer-form">
               <p class="footer-form__title">Подпишитесь на рассылку</p>
               <div class="footer-form-field">
                 <label class="footer-form-field__label">
-                  <input type="email"class="footer-form-field__input" name="email" required placeholder="E-mail">
+                  <input type="email" class="footer-form-field__input" name="email" required placeholder="E-mail">
                 </label>
                <button type="submit" class="footer-form-field__button"><span class="footer-form-field__text">Подписаться</span>
                  <svg class="footer-form-field__icon" width="24px" height="24px">
@@ -458,7 +515,7 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button type="modal__button" class="modal__close" data-modal-close>
+        <button type="button" class="modal__close" data-modal-close>
           <svg class="modal__icon" width="18" height="18">
             <use href="./images/symbol-defs.svg#icon-close-icon"></use>
           </svg>
@@ -529,6 +586,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,9 +1,15 @@
+.section--mobile-none {
+    display: none;
+    @media screen and (min-width: 1200px) {
+        display: block;
+    }
+}
 .activity-list {
     display: flex;
 }
 
 .activity-list__item {
-    flex-basis: calc((100% - 90px)/3);
+    flex-basis: calc((100% - 60px)/3);
     position: relative;
     &:not(:last-child) {
             margin-right: 30px;
